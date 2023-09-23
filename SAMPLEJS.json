@@ -1,0 +1,82 @@
+[
+    {
+        "Item": "Pen",
+        "Price": 1.0
+    },
+    {
+        "Item": "Notebook",
+        "Price": 2.5
+    },
+    {
+        "Item": "Pencil",
+        "Price": 0.5
+    },
+    {
+        "Item": "Eraser",
+        "Price": 0.3
+    },
+    {
+        "Item": "Ruler",
+        "Price": 1.2
+    },
+    {
+        "Item": "Stapler",
+        "Price": 3.0
+    },
+    {
+        "Item": "Scissors",
+        "Price": 2.0
+    },
+    {
+        "Item": "Highlighter",
+        "Price": 1.5
+    },
+    {
+        "Item": "Markers",
+        "Price": 2.8
+    },
+    {
+        "Item": "Glue Stick",
+        "Price": 1.0
+    },
+    {
+        "Item": "Tape Dispenser",
+        "Price": 2.2
+    },
+    {
+        "Item": "Paper Clips",
+        "Price": 0.2
+    },
+    {
+        "Item": "Calculator",
+        "Price": 5.0
+    },
+    {
+        "Item": "Sticky Notes",
+        "Price": 1.0
+    },
+    {
+        "Item": "Folders",
+        "Price": 0.75
+    },
+    {
+        "Item": "Sharpener",
+        "Price": 0.4
+    },
+    {
+        "Item": "Binder",
+        "Price": 3.5
+    },
+    {
+        "Item": "Index Cards",
+        "Price": 1.0
+    },
+    {
+        "Item": "Correction Fluid",
+        "Price": 1.2
+    },
+    {
+        "Item": "Crayons",
+        "Price": 1.8
+    }
+]

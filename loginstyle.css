@@ -1,0 +1,286 @@
+body {
+    background-image: url('images/Hexagon-background.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+    background-attachment: fixed; /* Optional */
+}
+
+#all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+.input-group {
+    padding: 12px;
+    text-overflow: ellipsis;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1.23536;
+    letter-spacing: -.022em;
+    -webkit-font-smoothing: antialiased;
+    font-style:italic;
+    font-variant-ligatures:additional-ligatures ;
+    font-variant-caps:all-petite-caps ;
+    font-variant-numeric:diagonal-fractions ;
+    font-variant-east-asian:full-width ;
+    
+    font-weight:300 ;
+    font-stretch:expanded ;
+    font-size:medium ;
+    font-optical-sizing:none ;
+    font-kerning:auto ;
+    font-feature-settings:"aalt" ;
+    font-variation-settings:inherit ;
+    text-rendering: auto;
+    
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    padding: 1px 2px;
+    
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+
+
+.goto:hover i {
+    transform: rotate(360deg);
+    transition: transform 1s ease-in-out;
+}
+.goto i {
+    color: white;
+
+}
+.goto{
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+
+}
+
+
+
+
+
+#password-field.active {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-50%); /* Start with translateY -100% (hidden above) */
+    transition: opacity 5s ease-in-out, transform 5s ease-in-out; /* Add transitions for smooth appearing/disappearing */
+}
+
+#password-field {
+    opacity: 1; /* When active, set opacity to 1 (visible) */
+    transform: translateY(0%); /* When active, set translateY to 0% (visible) */
+    transition: opacity 5s ease-in-out, transform 5s ease-in-out; /* Add transitions for smooth appearing/disappearing */
+
+}
+
+#show-password-button {
+    display: none;
+    color: white;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.email-field{
+    padding: auto;
+}
+
+/* Add this CSS to your stylesheet */
+.input-group.email-field .form-control::placeholder {
+    font-size: 110%; /* Adjust the percentage to your desired size */
+    transform: translateY(1%);
+    transition: transform 0.5s ease, font-size 0.5s ease; /* Add font-size to the transition */
+}
+
+.input-group.email-field:hover .form-control::placeholder {
+    transform: translateY(-80%);
+    font-size: 70%; /* Reset the font size when hovered */
+    transition: transform 0.5s ease, font-size 0.5s ease; /* Add font-size to the transition */
+}
+.input-group.pass-field .form-control::placeholder {
+    font-size: 110%; /* Adjust the percentage to your desired size */
+    transform: translateY(1%);
+    transition: transform 0.5s ease, font-size 0.5s ease; /* Add font-size to the transition */
+}
+
+.input-group.pass-field:hover .form-control::placeholder {
+    transform: translateY(-80%);
+    font-size: 70%; /* Reset the font size when hovered */
+    transition: transform 0.5s ease, font-size 0.5s ease; /* Add font-size to the transition */
+}
+
+.login-container {
+    text-align: center;
+    border:  0px;
+    padding: 20px;
+    margin: 50px;
+    font-size: 17px;
+    border-radius: 30px;
+    background-color:white ;
+    backdrop-filter: blur(10px);
+    box-shadow: 
+    0 5px 15px 1px #f0f6f6,
+    0 1px 15px 1px #e2e1e3;
+      width: 40%;
+    height: 60%;
+}
+
+.login-container h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Additional styles for the "Forgot Password?" link */
+.forget {
+    position: absolute;
+    top: auto;
+    right: 5%;
+    margin-top: 0;
+    text-decoration: none;
+    color: #007bff;
+}
+#login-button {
+    color: white;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    transition: transform .1s ease-in-out;
+}
+
+#login-button:hover {
+    transform: translateY(-4px);
+    border-color:white;
+    color:black;
+    background: white;
+}
+
+
+
+.social-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 100%;
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+    background: -webkit-linear-gradient(102deg,#0b0c10,#1f2833,#c5c6c7);    
+}
+
+
+
+.icon {
+    width: auto;
+    height:30px;
+    padding: 0;
+}
+
+
+.login-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Google Button */
+.google-button {
+    background-color: #f7f7f7;
+    border:solid black 1px;
+}
+
+/* Facebook Button */
+.facebook-button {
+    background-color: #1877F2;
+    color: #ffffff;
+}
+
+
+/* Instagram Button */
+.instagram-button {
+    background-color: #d81278;
+    color: #ffffff;
+}
+
+/* Twitter Button */
+.twitter-button {
+    background-color: #1DA1F2;
+    color: #ffffff;
+}
+
+footer{
+    bottom: 20px;
+}
+
+
+.sign{
+    margin-bottom:auto;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 15px;
+        margin: 30px;
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .social-button {
+        height: 40px;
+        width: 40px;
+    }
+
+    .login-icon h1 {
+        font-size: 18px;
+    }
+}
+
+/* Media query for even smaller screens (e.g., narrower mobile devices) */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+        margin: 20px;
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .social-button {
+        height: 20px;
+        width: 20px;
+    }
+
+    .login-icon h1 {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Uploader</title>
+    <link rel="stylesheet" href="pdfstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <h1>PDF Uploader</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="pdfFile" id="pdfLabel">Select PDF file</label>
+            <input type="file" name="pdfFile" id="pdfFile" accept=".pdf">
+            <p class="drop">or drop PDF here </p>
+            <button type="submit" id='  uploadForm'class=" sub" >Generate</button>
+        </form>
+    </main>
+
+    <script>
+        // pdf upload
+        const fileInput = document.getElementById('pdfFile');
+        const pdfLabel = document.getElementById('pdfLabel');
+        const uploadForm = document.getElementById('uploadForm');
+
+        fileInput.addEventListener('change', function() {
+            // Update the label text with the selected file's name
+            pdfLabel.textContent = this.files[0].name;
+        });
+        uploadForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('pdfFile', fileInput.files[0]);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

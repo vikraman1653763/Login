@@ -1,0 +1,107 @@
+body {
+    background-image: url('images/Hexagon-background.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+    background-attachment: fixed; /* Optional */
+    display: flex;
+    flex-direction: column;
+    padding: 20%;
+    height: auto;
+}
+.subbtn{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.down {
+    color: white;
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+    transition: transform .1s ease-in-out;
+    margin-left: 40%;
+}
+
+.down:hover {
+    transform: translateY(-4px);
+    border-color:white;
+    color:black;
+    background: white;
+}
+
+.tab{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    overflow: auto;
+    box-shadow: 
+    0 5px 15px 1px #f0f6f6,
+    0 1px 15px 1px #e2e1e3;}
+.tabbody1{
+    height: 200px;
+    overflow: scroll;
+}
+
+.tabrow{
+    background: black;
+    color: white;
+}
+th{
+    border: 1px solid white;
+    border-radius: 10px;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.tabbody{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 50px;
+    width: 200px;
+    background: -webkit-linear-gradient(45deg,#f0f4f4,#a2cac8);
+    color: black;
+    
+}
+
+table {
+    height: 20px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.tab::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; 
+}
+
+.tab::-webkit-scrollbar-thumb {
+    background-color: #d7d4d4; 
+    border-radius: 10px; 
+}
+
+.tab::-webkit-scrollbar-thumb:hover {
+    background: -webkit-linear-gradient(45deg,#00dbde,#fc00ff);
+}
+
+.tab::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 5px; 
+}
+
+td{
+    border-radius: 5px;
+    font-size: larger;
+    border: 1px solid rgba(245, 243, 255);
+}
+@media (max-width: 768px) {
+    #data-table {
+        font-size: normal;
+        padding: 5px;
+    }
+
+    .tab {
+          
+        margin-top: 200px; 
+    }
+    .tabbody{
+        align-items: center;
+        justify-content: center;
+    }
+}
